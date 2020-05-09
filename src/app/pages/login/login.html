@@ -1,0 +1,73 @@
+<ion-header>
+  <mat-toolbar color="dark">
+    <ion-buttons [hidden]="!authService.isAuthenticated" slot="start">
+      <ion-menu-button>
+        <ion-menu-button><i class="fas fa-bars"></i></ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title class="title-padding">Dating Props</ion-title>
+  </mat-toolbar>
+</ion-header>
+<ion-content class="mat-elevation-z7">
+  <div class="flex-wrapper" fxLayout="column" fxLayoutAlign="start center">
+    <div class="login-logo">
+      <img src="assets/img/dating-logo.png" alt="dating logo" />
+    </div>
+
+    <form #loginForm="ngForm" novalidate>
+      <h2>Email Sign In</h2>
+      <ion-list>
+        <form [formGroup]="formGroup">
+          <ion-item lines="none">
+            <mat-form-field appearance="standard">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="nameCtrl" [errorStateMatcher]="matcher" />
+              <mat-error *ngIf="nameControl().hasError('email') && !nameControl().hasError('required')">
+                Email address format only
+              </mat-error>
+              <mat-error *ngIf="nameControl().hasError('maxlength') && !nameControl().hasError('required')">
+                Too many characters
+              </mat-error>
+              <mat-error *ngIf="nameControl().hasError('required')"> Email is <strong>required</strong> </mat-error>
+            </mat-form-field>
+          </ion-item>
+
+          <ion-item lines="none">
+            <mat-form-field appearance="standard">
+              <mat-label>Password</mat-label>
+              <input matInput formControlName="passCtrl" [errorStateMatcher]="matcher" />
+              <mat-error *ngIf="passControl().hasError('maxlength') && !passControl().hasError('required')">
+                Too many characters
+              </mat-error>
+              <mat-error *ngIf="passControl().hasError('required')"> Password is <strong>required</strong> </mat-error>
+            </mat-form-field>
+          </ion-item>
+        </form>
+        <div class="buttons">
+          <ion-row>
+            <ion-col fxLayout="row" fxLayoutAlign="space-around center">
+              <a class="btn btn-primary button-hover" (click)="onLogin()" type="submit" shape="round" fill="outline">
+                Login</a
+              >
+            </ion-col>
+            <ion-col fxLayout="row" fxLayoutAlign="space-around center">
+              <a
+                class="btn btn-secondary button-hover"
+                (click)="navigateSignUp()"
+                color="medium"
+                shape="round"
+                fill="outline"
+                >Signup</a
+              >
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-list>
+    </form>
+
+    <p id="google-sign-in">Quick access with</p>
+    <div class="social fb">
+      <a (click)="loginGoogle()"><i class="fa fa-google"></i></a>
+    </div>
+  </div>
+</ion-content>

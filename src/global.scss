@@ -1,0 +1,58 @@
+// http://ionicframework.com/docs/theming/
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+// Toolbar
+.mat-toolbar {
+    height: 10vh;
+}
+.ion-title.title-padding {
+    text-align: center;
+}
+
+// Wrappers
+ion-content {
+    height: 90vh;
+}
+.flex-wrapper {
+    height: 90vh;
+    width: 100vw;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: "Satisfy", cursive;
+    text-align: center;
+    font-weight: 100;
+}
+
+.center-alert .alert-wrapper {
+    .alert-title {
+        text-align: center;
+    }
+    .alert-sub-title {
+        text-align: center;
+    }
+
+    .alert-message {
+        text-align: center;
+    }
+
+    .alert-button-inner {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    button {
+        margin: 0 auto;
+    }
+}
