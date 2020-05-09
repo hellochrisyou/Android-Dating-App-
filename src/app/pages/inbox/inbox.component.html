@@ -14,7 +14,17 @@
 
       <shared-card-page *ngFor="let user of userStateService.inboxUsers$ | async; trackBy: usersTrackFn" [user]="user"
         [option]="status">
-        <ng-template #messagesBtnTemplate let-i=index>
+        <ng-template #inboxTemplate let-i=index>
+          <div class="btn_wrap">
+            <span>Options</span>
+            <div class="container">
+              <i matTooltip="View Inbox" matTooltipPosition="above" class="fas fa-inbox" aria-hidden="true"></i>
+              <i matTooltip="Profile" matTooltipPosition="above" class="fas fa-user-friends"></i>
+              <i matTooltip="Proposal" matTooltipPosition="above" class="fas fa-lightbulb"></i>
+            </div>
+          </div>
+        </ng-template>
+        <!-- <ng-template #messagesBtnTemplate let-i=index>
           <a class="oval" (click)="navigateMessages(user.email, user.displayName)" matTooltip="View Messages"
             matTooltipPosition="below">
             <i class="fa fa-inbox fa-2x" aria-hidden="true"></i>
@@ -29,7 +39,7 @@
           <a class="oval" (click)="submitProposal(user.displayName, user.email)" matTooltip="Submit Proposal"
             matTooltipPosition="below">
             <i class="fas fa-lightbulb fa-2x"></i> </a>
-        </ng-template>
+        </ng-template> -->
       </shared-card-page>
     </div>
   </div>

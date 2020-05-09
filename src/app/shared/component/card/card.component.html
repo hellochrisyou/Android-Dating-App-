@@ -16,6 +16,13 @@
 
     <ion-card-content>
       <div fxLayout="row" fxLayoutAlign="space-around center">
+        <div>
+          <span><i [style.color]="checkRating(1)" class="fa fa-star"></i></span>
+          <span><i [style.color]="checkRating(2)" class="fa fa-star"></i></span>
+          <span><i [style.color]="checkRating(3)" class="fa fa-star"></i></span>
+          <span><i [style.color]="checkRating(4)" class="fa fa-star"></i></span>
+          <span><i [style.color]="checkRating(5)" class="fa fa-star"></i></span>
+        </div>
         <ng-container [ngTemplateOutlet]=" optionTemplateRef">
         </ng-container>
         <ng-container [ngTemplateOutlet]=" optionTemplateRef2">

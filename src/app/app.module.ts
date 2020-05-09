@@ -21,6 +21,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestore';
 import { InboxDetailsComponent } from './pages/inbox/inbox-details/inbox-details.component';
 import { InboxModule } from './pages/inbox/inbox.module';
+import { PeopleModule } from './pages/people/people.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,6 +32,7 @@ import { InboxModule } from './pages/inbox/inbox.module';
     SharedModule,
     FormsModule,
     InboxModule,
+    PeopleModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,

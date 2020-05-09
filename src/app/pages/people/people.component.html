@@ -15,17 +15,18 @@
     <div class="flex-container" fxLayout="row wrap" fxLayoutAlign.gt-xs="start" fxLayoutAlign.lt-sm="start">
       <shared-card-page *ngFor="let user of userStateService.peopleUsers$ | async; index as i; trackBy: usersTrackFn"
         [user]="user">
-        <ng-template #messagesBtnTemplate let-i=index>
-          <a class="oval" (click)="sendMessage(user.email, user.displayName)" matTooltip="Send Message"
-            matTooltipPosition="below">
-            <i class="far fa-envelope fa-2x"></i>
-          </a>
-        </ng-template>
-        <ng-template #profileBtnTemplate let-i=index>
-          <a class="oval" (click)="navigateProfile(user.email)" matTooltip="View Profile" matTooltipPosition="below">
-            <i class="fas fa-user-friends fa-2x"></i>
-
-          </a>
+        <ng-template #peopleTemplate let-i=index>
+          <div class="btn_wrap">
+            <span>Options</span>
+            <div class="container">
+              <i (click)="sendMessage(user.email, user.displayName)" matTooltip="Send a Messages"
+                matTooltipPosition="above" class="fas fa-envelope" aria-hidden="true"></i>
+              <i (click)="navigateProfile(user.email)" matTooltip="View Profile" matTooltipPosition="above"
+                class="fas fa-user-friends"></i>
+              <i (click)="openBottomSheet(i)" matTooltip="Give a Rating" matTooltipPosition="above"
+                class="fas fa-star"></i>
+            </div>
+          </div>
         </ng-template>
       </shared-card-page>
     </div>

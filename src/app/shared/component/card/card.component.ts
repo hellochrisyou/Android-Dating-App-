@@ -35,8 +35,8 @@ export class SharedCardPage implements OnInit {
     this._option = value;
   }
 
-  @ContentChild('messagesBtnTemplate', { static: false }) optionTemplateRef: TemplateRef<any>;
-  @ContentChild('profileBtnTemplate', { static: false }) optionTemplateRef2: TemplateRef<any>;
+  @ContentChild('inboxTemplate', { static: false }) optionTemplateRef: TemplateRef<any>;
+  @ContentChild('peopleTemplate', { static: false }) optionTemplateRef2: TemplateRef<any>;
   @ContentChild('proposalBtnTemplate', { static: false }) optionTemplateRef3: TemplateRef<any>;
 
   constructor(
@@ -49,6 +49,10 @@ export class SharedCardPage implements OnInit {
     // this.userStateService.users
 
     this.userService.getUsers().subscribe();
+  }
+
+  public checkRating(value: number): string {
+    return (this.user.averageRating > value ? '#ffc107' : '#cccccc')
   }
 }
 

@@ -1,16 +1,14 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController, NavController, ToastController } from '@ionic/angular';
+import { AuthService } from 'src/app/core/service/auth/auth.service';
 
 import { EmitService } from '../../core/service/emit.service';
-import { MessagingService } from '../../core/service/messaging.service';
 import { ProposalService } from '../../core/service/proposal.service';
-import { UserService } from '../../core/service/user.service';
+import { MessagingStateService } from '../../core/service/state/messaging.state.service';
+import { UserStateService } from '../../core/service/state/user.state.service';
 import { ProfileModal } from '../../shared/component/profile/profile.component';
 import { Message, Proposal } from '../../shared/interface/models';
-import { GET_DATE, GET_TODAY_DATE } from './inbox.util';
-import { UserStateService } from '../../core/service/state/user.state.service';
-import { MessagingStateService } from '../../core/service/state/messaging.state.service';
-import { AuthService } from 'src/app/core/service/auth/auth.service';
+import { GET_TODAY_DATE } from './inbox.util';
 
 declare var google: any;
 @Component({
@@ -44,7 +42,6 @@ export class InboxComponent implements OnInit {
   }
   ionViewDidEnter() {
     console.log("InboxComponent -> ngOnInit -> userStateService.inboxUsers$", this.userStateService.inboxUsers$)
-
   }
 
   public navigateMessages(userEmail: string, displayNameArg: string) {

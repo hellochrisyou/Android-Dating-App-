@@ -1,3 +1,4 @@
+import { User } from 'firebase';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { UserService } from '../../core/service/user.service';
 import { MessagingService } from '../../core/service/messaging.service';
@@ -9,6 +10,8 @@ import { GET_DATE } from '../inbox/inbox.util';
 import { ProfileModal } from '../../shared/component/profile/profile.component';
 import { UserStateService } from '../../core/service/state/user.state.service';
 import { AuthService } from '../../core/service/auth/auth.service';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { RatingComponent } from './rating/rating.component';
 
 @Component({
   selector: 'people-page',
@@ -31,16 +34,23 @@ export class PeoplePage implements OnInit {
     private authService: AuthService,
     private modalController: ModalController,
     public toastController: ToastController,
+    private _bottomSheet: MatBottomSheet,
 
   ) {
 
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
 
   }
-  //   ionViewDidEnter() {
-  //   }
+
+  public openBottomSheet(userIndex: number): void {
+    console.log("PeoplePage -> openBottomSheet -> userIndex", userIndex)
+    this._bottomSheet.open(RatingComponent, {
+      // data: otherUser
+    }
+    );
+  }
 
   async sendMessage(userEmail: string, displayName: string) {
     const alert = await this.alertCtrl.create({

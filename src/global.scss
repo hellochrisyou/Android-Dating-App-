@@ -13,6 +13,8 @@
 // Toolbar
 .mat-toolbar {
     height: 10vh;
+    background-image: -webkit-gradient(linear, left top, right top, from(#020024), to(#990000));
+    background-image: linear-gradient(90deg, #020024 0%, #990000 100%);
 }
 .ion-title.title-padding {
     text-align: center;
@@ -55,4 +57,10 @@ h2 {
     button {
         margin: 0 auto;
     }
+}
+
+// Icons
+i,
+a {
+    cursor: pointer;
 }

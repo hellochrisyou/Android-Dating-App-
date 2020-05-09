@@ -33,7 +33,9 @@ export class UserService {
         hobbies: null,
         description: null,
         images: [],
-        proposalCount: 0
+        proposalCount: 0,
+        averageRating: 0,
+        ratingCount: 0
       }
       ));
   }
@@ -52,7 +54,9 @@ export class UserService {
       hobbies: dataArg.hobbies,
       description: dataArg.description,
       images: dataArg.images,
-      proposalCount: dataArg.proposalCount
+      proposalCount: dataArg.proposalCount,
+      ratingCount: dataArg.ratingCount,
+      averageRating: dataArg.averageRating
     };
     console.log('data', data);
     return userRef.set(Object.assign({}, data), { merge: true });
@@ -66,7 +70,6 @@ export class UserService {
   public getUser(email: string) {
     return this.afs.doc(`users/${email}`);
   }
-
 
   public returnUsersMessages(messages: Message[], email: string, otherEmail: string): Message[] {
 

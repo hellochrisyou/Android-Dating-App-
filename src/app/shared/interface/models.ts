@@ -11,6 +11,8 @@ export interface User {
     description?: string;
     images?: string[];
     proposalCount?: number;
+    averageRating?: number;
+    ratingCount?: number;
 }
 
 export interface Proposal {
