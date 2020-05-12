@@ -22,7 +22,6 @@ export class UserStateService {
         this.fetchAll();
     }
 
-
     set users(val: User[]) {
         this._users.next(val);
     }
@@ -58,10 +57,12 @@ export class UserStateService {
     readonly users$ = this._users.asObservable();
     readonly inboxUsers$ = this._inboxUsers.asObservable();
     readonly peopleUsers$ = this._peopleUsers.asObservable();
-
     readonly messages$ = this._messages.asObservable();
     readonly images$ = this._images.asObservable();
     readonly proposals$ = this._proposals.asObservable();
+
+    peopleUsersArr: User[];
+    inboxUsersArr: User[];
 
     public setUser(userEmail: string) {
         this._users.forEach((users: any) => {
@@ -73,6 +74,8 @@ export class UserStateService {
     public setPartitionedUsers() {
         this.inboxUsers = [];
         this.peopleUsers = [];
+        this.inboxUsersArr = [];
+        this.peopleUsersArr = [];
         const tmpInboxArr = [];
         const tmpPeopleArr = [];
         this._users.forEach(users => users.forEach(user => {
@@ -90,9 +93,13 @@ export class UserStateService {
             });
         }));
         this.inboxUsers = tmpInboxArr;
+        this.inboxUsersArr = tmpInboxArr;
+        this.peopleUsersArr = tmpPeopleArr;
         this.peopleUsers = tmpPeopleArr;
     }
-
+    public getPeopleUsers() {
+        return this._peopleUsers;
+    }
     public setMessageUser(userEmail: string) {
         this.messagingService.getMessages(userEmail).subscribe((messagesData: any[]) => {
             this.messages = messagesData;

@@ -6,11 +6,12 @@
       </ion-menu-button>
     </ion-buttons>
     <ion-title class="title-padding">Dating Props</ion-title>
+    <span (click)="logout()">Logout</span>
   </mat-toolbar>
 </ion-header>
 
 <ion-content fullscreen="true">
-  <div id="proposal-flex-container" fxLayout="row wrap" fxLayoutAlign.gt-xs="center" fxLayoutAlign.lt-sm="center">
+  <div id="proposal-flex-container" fxLayout="row wrap" fxLayoutAlign="center start">
     <h4>Proposal</h4>
     <mat-tab-group mat-align-tabs="center">
       <mat-tab label="Your Proposals">
@@ -23,7 +24,7 @@
 
               <ng-container matColumnDef="proposalDate">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
-                <td mat-cell *matCellDef="let row"> {{row.proposalDate| date: 'short'}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.proposalDate| date: 'shortDate'}} </td>
               </ng-container>
 
               <ng-container matColumnDef="sender">

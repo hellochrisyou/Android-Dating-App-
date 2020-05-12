@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../core/service/auth/auth.service';
 
 
 @Component({
@@ -9,6 +10,9 @@ import { Component } from '@angular/core';
 export class SupportPage {
 
   constructor(
+    public authService: AuthService
   ) { }
-
+  public logout(): void {
+    this.authService.signOut();
+  }
 }

@@ -1,0 +1,37 @@
+.support-logo {
+    padding: 20px 0;
+    min-height: 200px;
+    text-align: center;
+}
+h3,
+h4 {
+    color: white;
+}
+h4 {
+    top: 10vh;
+    position: absolute;
+    text-align: center;
+}
+.support-logo img {
+    max-width: 150px;
+}
+
+h3 {
+    position: absolute;
+    top: 25vh;
+    font-size: 1rem;
+}
+
+.button-hover {
+    color: white;
+}
+
+.flex-container {
+    background-image: url("../../../assets/img/bg/bg-5.jpg");
+    background-size: cover;
+    height: 100%;
+}
+
+h4 {
+    margin-top: 5vh;
+}

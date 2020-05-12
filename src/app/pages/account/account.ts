@@ -156,7 +156,7 @@ export class AccountPage implements OnInit, AfterViewInit {
             };
             this.imageService.addImageList(tmpImg, this.authService.authState.email);
             this.selectedFileName = 'Select File';
-            this.router.navigateByUrl('/account');
+            this.router.navigateByUrl('/app/tabs/account');
           }
         });
       });
@@ -220,7 +220,9 @@ export class AccountPage implements OnInit, AfterViewInit {
       });
     });
   }
-
+  public logout(): void {
+    this.authService.signOut();
+  }
   async launchPicModal() {
     const modal = await this.modalController.create({
       component: PicModalPage,

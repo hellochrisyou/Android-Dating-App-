@@ -4,6 +4,7 @@
       <ion-menu-button><i class="fas fa-bars"></i></ion-menu-button>
     </ion-buttons>
     <ion-title class="title-padding">Dating Props</ion-title>
+    <span (click)="logout()">Logout</span>
   </mat-toolbar>
 </ion-header>
 
@@ -17,10 +18,10 @@
       <p><span class="start-text">Age:</span><span class="span-info">{{this.user.age}}</span></p>
       <p><span class="start-text">Religion:</span><span class="span-info">{{this.user.religion}}</span></p>
       <p><span class="start-text">Want Kids?</span><span class="span-info">{{this.user.haveKids}}</span></p>
-      <p><span class="start-text">Hobbies:</span><span class="span-info">{{this.user.hobbies}}</span></p>
-      <div><span class="start-text">Description:</span>
-        <div id="description-info">{{this.user.description}}</div>
-      </div>
+      <p><span class="start-text">Hobbies:</span></p>
+      <div class="description-info">{{this.user.hobbies}}</div>
+      <p><span class="start-text">Description:</span></p>
+      <div class="description-info">{{this.user.description}}</div>
       <br>
       <br>
       <h4>Edit Profile</h4>
@@ -79,14 +80,14 @@
       <br>
       <section fxLayout="column" fxLayoutAlign="start center">
         <a class="oval" color="primary" (click)="launchPicModal()">
-          <i class="fas fa-camera fa-2x"></i>
+          <i class="fa fa-camera fa-2x"></i>
         </a>
       </section>
       <br>
       <div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.xs="column">
         <div *ngFor="let image of imageUrls; index as i">
           <span>
-            <ion-icon class="cancel-icon" name="close-outline" (click)="deleteImage(i)"></ion-icon>
+            <i class="fa fa-times" (click)="deleteImage(i)"></i>
           </span>
           <img class="all-images" [src]="image">
         </div>

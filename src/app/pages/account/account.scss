@@ -1,0 +1,233 @@
+img {
+    max-width: 140px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+h3 {
+    margin: 0 auto;
+}
+
+ion-content {
+    max-width: 100vw;
+}
+
+div.ion-padding-top {
+    background-color: white;
+    padding: 2rem 1rem 2rem;
+    width: 50vw;
+}
+
+.fxlayout-support {
+    width: 100vw;
+    height: 150vh;
+    background-size: cover;
+    background-image: url("../../../assets/img/bg/bg-6.jpg");
+    align-items: flex-start;
+}
+ion-button {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+label {
+    border: none;
+}
+.description-info {
+    text-align: left;
+}
+.start-text {
+    font-style: italic;
+    font-style: underline;
+    text-align: left;
+}
+
+i.fa-camera {
+    padding-left: 6% !important;
+    padding-top: 10%;
+}
+
+i.fa-times {
+    color: crimson;
+}
+
+.span-info {
+    float: right;
+}
+
+progress::-webkit-progress-value {
+    transition: width 0.1s ease;
+}
+
+p {
+    text-align: left;
+}
+
+.cancel-icon {
+    color: crimson;
+    cursor: pointer;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+h3 {
+    margin: 5vh auto 5vh;
+}
+
+a.btn {
+    font-size: 0.625rem;
+    width: 10rem;
+}
+h4 {
+    height: 10vh;
+}
+div.ion-padding-top {
+    width: 100vw;
+    position: absolute;
+}
+
+// Input
+.file-input {
+    display: inline-block;
+    text-align: left;
+    background: #fff;
+    padding: 16px;
+    width: 450px;
+    position: relative;
+    border-radius: 3px;
+}
+
+.file-input > [type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.file-input > .button {
+    display: inline-block;
+    cursor: pointer;
+    background: #eee;
+    padding: 8px 16px;
+    border-radius: 2px;
+    margin-right: 8px;
+}
+
+.file-input:hover > .button {
+    background: dodgerblue;
+    color: white;
+}
+
+.file-input > .label {
+    color: #333;
+    white-space: nowrap;
+    opacity: 0.3;
+}
+
+.file-input.-chosen > .label {
+    opacity: 1;
+}
+
+// Button
+* {
+    box-sizing: inherit;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
+.buttons {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    height: 100%;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.btn {
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 45px;
+    margin: 0 0 2em;
+    max-width: 160px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.button-hover {
+    letter-spacing: 0;
+}
+
+.button-hover:hover,
+.button-hover:active {
+    letter-spacing: 5px;
+}
+
+.button-hover:after,
+.button-hover:before {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    -webkit-transition: all 280ms ease-in-out;
+    transition: all 280ms ease-in-out;
+    width: 0;
+}
+
+.button-hover:after,
+.button-hover:before {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-color: #1a73e8;
+    -webkit-transition: width 350ms ease-in-out;
+    transition: width 350ms ease-in-out;
+    width: 70%;
+}
+
+.button-hover:hover:before {
+    bottom: auto;
+    top: 0;
+    width: 70%;
+}
+
+.btn-primary:before,
+.btn-primary:after {
+    border: 1px solid #1a73e8;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    border-color: #1a73e8;
+}
+
+.btn-secondary:before,
+.btn-secondary:after {
+    border: 1px solid grey;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+    border-color: grey;
+}

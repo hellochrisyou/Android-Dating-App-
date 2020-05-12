@@ -15,19 +15,19 @@
     </ion-card-header>
 
     <ion-card-content>
-      <div fxLayout="row" fxLayoutAlign="space-around center">
+      <div fxLayout="row" fxLayoutAlign="start center">
         <div>
-          <span><i [style.color]="checkRating(1)" class="fa fa-star"></i></span>
-          <span><i [style.color]="checkRating(2)" class="fa fa-star"></i></span>
-          <span><i [style.color]="checkRating(3)" class="fa fa-star"></i></span>
-          <span><i [style.color]="checkRating(4)" class="fa fa-star"></i></span>
-          <span><i [style.color]="checkRating(5)" class="fa fa-star"></i></span>
+          <span class="span-icon"><i [style.color]="checkRating(1)" class="fa fa-star"></i></span>
+          <span class="span-icon"><i [style.color]="checkRating(2)" class="fa fa-star"></i></span>
+          <span class="span-icon"><i [style.color]="checkRating(3)" class="fa fa-star"></i></span>
+          <span class="span-icon"><i [style.color]="checkRating(4)" class="fa fa-star"></i></span>
+          <span class="span-icon"><i [style.color]="checkRating(5)" class="fa fa-star"></i></span>
         </div>
-        <ng-container [ngTemplateOutlet]=" optionTemplateRef">
+        <ng-container class="container-template" [ngTemplateOutlet]=" optionTemplateRef">
         </ng-container>
-        <ng-container [ngTemplateOutlet]=" optionTemplateRef2">
+        <ng-container class="container-template" [ngTemplateOutlet]=" optionTemplateRef2">
         </ng-container>
-        <ng-container [ngTemplateOutlet]=" optionTemplateRef3">
+        <ng-container class="container-template" [ngTemplateOutlet]=" optionTemplateRef3">
         </ng-container>
       </div>
     </ion-card-content>

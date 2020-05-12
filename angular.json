@@ -103,10 +103,17 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
-            "styles": [],
+            "styles": [
+              {
+                "input": "src/theme/variables.scss"
+              },
+              {
+                "input": "src/global.scss"
+              }
+            ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/assets/styles"
+                "./src/assets/styles"
               ]
             },
             "scripts": [],

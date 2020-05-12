@@ -6,18 +6,20 @@
       </ion-menu-button>
     </ion-buttons>
     <ion-title class="title-padding">Dating Props</ion-title>
+    <span (click)="logout()">Logout</span>
   </mat-toolbar>
 </ion-header>
 
 <ion-content fullscreen="true">
-  <div class="people-flex-container" fxLayout="row wrap" fxLayoutAlign.gt-xs="start" fxLayoutAlign.lt-sm="start center">
+  <div class="people-flex-container" fxLayout="row wrap" fxLayoutAlign="center start">
     <h4>People</h4>
-    <div class="flex-container" fxLayout="row wrap" fxLayoutAlign.gt-xs="start" fxLayoutAlign.lt-sm="start">
-      <shared-card-page *ngFor="let user of userStateService.peopleUsers$ | async; index as i; trackBy: usersTrackFn"
+    <div class="flex-container" fxLayout="column wrap" fxLayoutAlign.gt-xs="center start">
+
+      <shared-card-page *ngFor="let user of userStateService.peopleUsers$| async; index as i; trackBy: usersTrackFn"
         [user]="user">
-        <ng-template #peopleTemplate let-i=index>
+        <ng-template #peopleTemplate>
           <div class="btn_wrap">
-            <span>Options</span>
+            <span class="span-title">Options</span>
             <div class="container">
               <i (click)="sendMessage(user.email, user.displayName)" matTooltip="Send a Messages"
                 matTooltipPosition="above" class="fas fa-envelope" aria-hidden="true"></i>

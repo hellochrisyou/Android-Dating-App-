@@ -5,13 +5,14 @@ import { MessagingService } from '../../core/service/messaging.service';
 import { NavController, AlertController, ToastController, ModalController } from '@ionic/angular';
 import { GET_USERS } from '../../shared/utils/user.util';
 import { MessageCount } from '../../shared/interface/interface';
-import { Message } from '../../shared/interface/models';
+import { Message, Stars } from '../../shared/interface/models';
 import { GET_DATE } from '../inbox/inbox.util';
 import { ProfileModal } from '../../shared/component/profile/profile.component';
 import { UserStateService } from '../../core/service/state/user.state.service';
 import { AuthService } from '../../core/service/auth/auth.service';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { RatingComponent } from './rating/rating.component';
+import { StarsService } from 'src/app/core/service/stars.service';
 
 @Component({
   selector: 'people-page',
@@ -21,6 +22,7 @@ import { RatingComponent } from './rating/rating.component';
 export class PeoplePage implements OnInit {
 
   users: any[];
+  starsExist: any[] = [];
   status = 'people';
   messageCount: MessageCount;
   thisMessage: Message = {};
@@ -30,6 +32,7 @@ export class PeoplePage implements OnInit {
 
   constructor(
     public alertCtrl: AlertController,
+    public starsService: StarsService,
     public userStateService: UserStateService,
     private authService: AuthService,
     private modalController: ModalController,
@@ -37,17 +40,17 @@ export class PeoplePage implements OnInit {
     private _bottomSheet: MatBottomSheet,
 
   ) {
-
   }
 
   ngOnInit(): void {
-
+    this.starsExist = this.starsService.getStars();
   }
 
+
   public openBottomSheet(userIndex: number): void {
-    console.log("PeoplePage -> openBottomSheet -> userIndex", userIndex)
+    const peopleUsers = this.userStateService.getPeopleUsers().value
     this._bottomSheet.open(RatingComponent, {
-      // data: otherUser
+      data: peopleUsers[userIndex]
     }
     );
   }
@@ -103,6 +106,9 @@ export class PeoplePage implements OnInit {
     return await modal.present();
   }
 
+  public logout(): void {
+    this.authService.signOut();
+  }
   //   public async presentToast(messageArg: string) {
   //     const toast = await this.toastController.create({
   //       header: '',

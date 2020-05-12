@@ -85,9 +85,6 @@ h3 {
   color: black;
 }
 
-@media screen and (max-width: 1024px) {
-  mat-tab-group {
-    position: absolute;
-    top: 5vh;
-  }
+.mat-tab-labels {
+  margin-top: 2vh;
 }

@@ -38,7 +38,9 @@ export interface Message {
     lgn?: number;
     count?: number;
 }
-
+export interface Stars {
+    sender?: string;
+}
 export interface MessageList {
     messages?: Message;
 }

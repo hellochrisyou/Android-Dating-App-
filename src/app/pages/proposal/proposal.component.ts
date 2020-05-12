@@ -1,5 +1,5 @@
 import { User } from 'firebase';
-import { Component, OnInit, ChangeDetectionStrategy, Input, ChangeDetectorRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input, ChangeDetectorRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Proposal } from '../../shared/interface/models';
 import { FILTER_PENDING_PROPOSALS } from './proposal.util';
 import { UserStateService } from '../../core/service/state/user.state.service';
@@ -19,6 +19,7 @@ declare var $: any;
   selector: 'proposal',
   templateUrl: './proposal.component.html',
   styleUrls: ['./proposal.component.scss'],
+  encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 
 })
@@ -157,6 +158,9 @@ export class ProposalComponent implements OnInit {
     await alert.present();
   }
 
+  public logout(): void {
+    this.authService.signOut();
+  }
 
   // SORTING
   public applyTheirFilter(event: Event): void {

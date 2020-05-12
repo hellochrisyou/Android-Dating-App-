@@ -4,24 +4,26 @@
       <ion-menu-button><i class="fas fa-bars"></i></ion-menu-button>
     </ion-buttons>
     <ion-title class="title-padding">Dating Props</ion-title>
+    <span (click)="logout()">Logout</span>
   </mat-toolbar>
 </ion-header>
 
 <ion-content fullscreen="true">
-  <div class="inbox-flex-container" fxLayout="row wrap" fxLayoutAlign.lt-sm="center">
+  <div class="inbox-flex-container" fxLayout="row wrap" fxLayoutAlign="center start">
     <h4>Inbox</h4>
-    <div class="flex-container" fxLayout="row wrap" fxLayoutAlign.gt-xs="start start" fxLayoutAlign.lt-sm="start">
+    <div class="flex-container" fxLayout="column wrap" fxLayoutAlign.gt-xs="center start">
 
       <shared-card-page *ngFor="let user of userStateService.inboxUsers$ | async; trackBy: usersTrackFn" [user]="user"
         [option]="status">
         <ng-template #inboxTemplate let-i=index>
           <div class="btn_wrap">
-            <span>Options</span>
-            <div class="container">
-              <i matTooltip="View Inbox" matTooltipPosition="above" class="fas fa-inbox" aria-hidden="true"></i>
-              <i matTooltip="Profile" matTooltipPosition="above" class="fas fa-user-friends"></i>
-              <i matTooltip="Proposal" matTooltipPosition="above" class="fas fa-lightbulb"></i>
-            </div>
+            <span class="span-title">Options</span>
+            <i (click)="navigateMessages(user.email, user.displayName)" matTooltip="View Inbox"
+              matTooltipPosition="above" class="fas fa-inbox" aria-hidden="true"></i>
+            <i (click)="navigateProfile(user.email)" matTooltip="Profile" matTooltipPosition="above"
+              class="fas fa-user-friends"></i>
+            <i (click)="submitProposal(user.email, user.email)" matTooltip="Proposal" matTooltipPosition="above"
+              class="fas fa-lightbulb"></i>
           </div>
         </ng-template>
         <!-- <ng-template #messagesBtnTemplate let-i=index>

@@ -92,7 +92,9 @@ export class InboxComponent implements OnInit {
     });
     toast.present();
   }
-
+  public logout(): void {
+    this.authService.signOut();
+  }
   async submitProposal(userName: string, userEmail: string) {
     const todaysDate = GET_TODAY_DATE();
 
