@@ -9,6 +9,8 @@ import { UserStateService } from '../../core/service/state/user.state.service';
 import { ProfileModal } from '../../shared/component/profile/profile.component';
 import { Message, Proposal } from '../../shared/interface/models';
 import { GET_TODAY_DATE } from './inbox.util';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { RatingComponent } from '../people/rating/rating.component';
 
 declare var google: any;
 @Component({
@@ -35,6 +37,7 @@ export class InboxComponent implements OnInit {
     public proposalService: ProposalService,
     public modalController: ModalController,
     public emitService: EmitService,
+    private _bottomSheet: MatBottomSheet,
 
   ) { }
 
@@ -45,7 +48,6 @@ export class InboxComponent implements OnInit {
   }
 
   public navigateMessages(userEmail: string, displayNameArg: string) {
-    console.log("InboxComponent -> navigateMessages -> displayNameArg", displayNameArg)
     this.messagingStateService.setMessageUser(this.authService.authState.email, userEmail);
     const navigationExtras = {
       state: {
@@ -71,7 +73,14 @@ export class InboxComponent implements OnInit {
     return await modal.present();
   }
 
-
+  public openBottomSheet(userIndex: number): void {
+    const inboxUsers = this.userStateService.getInboxUsers().value
+    console.log("PeoplePage -> openBottomSheet -> peopleUsers", inboxUsers[userIndex].averageRating)
+    this._bottomSheet.open(RatingComponent, {
+      data: inboxUsers[userIndex]
+    }
+    );
+  }
 
   public async presentToast(messageArg: string) {
     const toast = await this.toastController.create({

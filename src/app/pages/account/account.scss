@@ -1,6 +1,5 @@
 img {
     max-width: 140px;
-    border-radius: 50%;
     border: 1px solid black;
 }
 
@@ -17,7 +16,12 @@ div.ion-padding-top {
     padding: 2rem 1rem 2rem;
     width: 50vw;
 }
-
+button {
+    margin-top: 2vh;
+}
+.mat-form-field {
+    width: 100%;
+}
 .fxlayout-support {
     width: 100vw;
     height: 150vh;
@@ -34,7 +38,11 @@ label {
     border: none;
 }
 .description-info {
-    text-align: left;
+    float: right;
+}
+.span-right {
+    position: absolute;
+    right: 0;
 }
 .start-text {
     font-style: italic;
@@ -89,7 +97,9 @@ div.ion-padding-top {
     width: 100vw;
     position: absolute;
 }
-
+ion-fab-button {
+    margin: 0 auto;
+}
 // Input
 .file-input {
     display: inline-block;
@@ -135,7 +145,9 @@ div.ion-padding-top {
 .file-input.-chosen > .label {
     opacity: 1;
 }
-
+section {
+    margin: 3vh auto 3vh;
+}
 // Button
 * {
     box-sizing: inherit;

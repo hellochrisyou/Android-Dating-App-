@@ -133,6 +133,21 @@ test::before {
     height: 20px;
     position: absolute;
 }
+main {
+    background-image: url("../../../../assets/img/bg/bg-heart.jpg");
+    height: 100%;
+    background-repeat: repeat-y;
+}
+
+ion-card {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.mat-form-field,
+form {
+    width: 100%;
+}
 
 ion-button {
     margin: 0 auto;

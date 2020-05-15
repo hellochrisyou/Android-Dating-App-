@@ -136,7 +136,6 @@ export class AuthService {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then((credential) => {
       this.messageRef = this.afs.doc(`users/${credential.user.email}`);
       this.confirmToast('You have signed in with your Google account');
-      this.navCtrl.navigateForward('/app/tabs/account');
 
       this.messageRef.get().subscribe(
         (doc) => {
@@ -153,82 +152,8 @@ export class AuthService {
         },
         (err) => {
           // console.log('Error fetching document: ', err);
-        }
-      );
-    });
-  }
-
-  public signinFacebook() {
-    this.afAuth.auth
-      .signInWithPopup(new firebase.auth.FacebookAuthProvider())
-      .then((credential) => {
-        this.messageRef = this.afs.doc(`users/${credential.user.email}`);
-        this.confirmToast('You have signed in with your Facebook account');
-        this.navCtrl.navigateForward('/app/tabs/account');
-
-        this.messageRef.get().subscribe(
-          (doc) => {
-            if (!doc.exists) {
-              console.log('No such document!');
-              if (credential.user.photoURL === undefined) {
-                credential.user.photoURL =
-                  'https://www.kindpng.com/picc/m/285-2855863_a-festival-celebrating-tractors-round-profile-picture-placeholder.png';
-              }
-              this.userService.createUser(credential.user);
-            } else {
-              console.log('Document data:', doc.data());
-              this.authState.email = doc.data().email;
-              this.authState.displayName = doc.data().displayName;
-              this.authState.photoURL = doc.data().photoURL;
-              this.authState.title = doc.data().title;
-              this.authState.uId = doc.data().uId;
-              if (doc.data().photoUrl === undefined) {
-                this.authState.photoURL =
-                  'https://www.kindpng.com/picc/m/285-2855863_a-festival-celebrating-tractors-round-profile-picture-placeholder.png';
-              }
-            }
-          },
-          (err) => {
-            console.log('Error fetching document: ', err);
-          }
-        );
-      })
-      .catch((error) => {
-        console.log('Error signing in w/ facebook: ' + error);
-        this.errorProviderAlert();
-      });
-  }
-
-  public signinTwitter() {
-    this.afAuth.auth.signInWithPopup(new firebase.auth.TwitterAuthProvider()).then((credential) => {
-      this.messageRef = this.afs.doc(`users/${credential.user.email}`);
-      this.confirmToast('You have signed in with your Twitter account');
-      this.navCtrl.navigateForward('/app/tabs/account');
-
-      this.messageRef.get().subscribe(
-        (doc) => {
-          if (!doc.exists) {
-            console.log('No such document!');
-            if (credential.user.photoURL === undefined) {
-              credential.user.photoURL =
-                'https://www.kindpng.com/picc/m/285-2855863_a-festival-celebrating-tractors-round-profile-picture-placeholder.png';
-            }
-            this.userService.createUser(credential.user);
-          } else {
-            console.log('Document data:', doc.data());
-            this.authState.email = doc.data().email;
-            this.authState.displayName = doc.data().displayName;
-            this.authState.photoURL = doc.data().photoURL;
-            this.authState.title = doc.data().title;
-            this.authState.uId = doc.data().uId;
-            if (doc.data().photoUrl === undefined) {
-              this.authState.photoURL =
-                'https://www.kindpng.com/picc/m/285-2855863_a-festival-celebrating-tractors-round-profile-picture-placeholder.png';
-            }
-          }
-        },
-        (err) => {
-          // console.log('Error fetching document: ', err);
+        }, () => {
+          this.navCtrl.navigateForward('/app/tabs/account');
         }
       );
     });

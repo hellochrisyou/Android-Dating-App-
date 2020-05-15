@@ -5,13 +5,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { SharedCardPage } from './component/card/card.component';
-import { PicModalPage } from './component/profile/pic-modal/pic-modal.component';
 import { ProfileModal } from './component/profile/profile.component';
 import { TableComponent } from './component/table/table.component';
 import { MaterialModule } from './material.module';
 
 @NgModule({
-  declarations: [TableComponent, ProfileModal, PicModalPage, SharedCardPage],
+  declarations: [TableComponent, ProfileModal, SharedCardPage],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -36,7 +35,6 @@ import { MaterialModule } from './material.module';
   ],
   entryComponents: [
     ProfileModal,
-    PicModalPage
   ]
 })
 export class SharedModule { }

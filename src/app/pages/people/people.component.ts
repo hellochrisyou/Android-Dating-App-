@@ -43,12 +43,12 @@ export class PeoplePage implements OnInit {
   }
 
   ngOnInit(): void {
-    this.starsExist = this.starsService.getStars();
   }
 
 
   public openBottomSheet(userIndex: number): void {
     const peopleUsers = this.userStateService.getPeopleUsers().value
+    console.log("PeoplePage -> openBottomSheet -> peopleUsers", peopleUsers[userIndex].averageRating)
     this._bottomSheet.open(RatingComponent, {
       data: peopleUsers[userIndex]
     }

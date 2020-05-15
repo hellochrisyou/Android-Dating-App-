@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { Stars } from 'src/app/shared/interface/models';
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { Stars, User } from 'src/app/shared/interface/models';
 import { AuthService } from './auth/auth.service';
 
 @Injectable({
@@ -17,24 +17,22 @@ export class StarsService {
 
   }
 
-  public subscribeStars(): any {
-    this.getUserStars(this.authService.authState.email).subscribe(data => {
-      console.log("StarsService -> data", data)
-      this.stars = data;
-    });
-  }
-  public getUserStars(email: string): any {
+  public getUserStarValues(email: string): any {
     return this.afs.collection('users').doc(email).collection('stars').valueChanges();
   }
+  public getUserStars(email: string): any {
+    return this.afs.collection('users').doc(email).collection('stars').snapshotChanges();
+  }
+
 
   public rateStars(stars: Stars, senderEmail: string): void {
-
     this.afs.collection('users').doc(senderEmail).collection('stars').add({
       stars: stars,
     });
   }
-
-  public getStars(): any {
-    return this.stars;
+  public updateStars(star: Stars, email: string, id: any) {
+    console.log("StarsService -> updateStars -> this.authService.authState.email", this.authService.authState.email)
+    const userRef: AngularFirestoreDocument<any> = this.afs.collection('users').doc(email).collection('stars').doc(id);
+    return userRef.set(Object.assign({}, star), { merge: false });
   }
 }

@@ -100,6 +100,9 @@ export class UserStateService {
     public getPeopleUsers() {
         return this._peopleUsers;
     }
+    public getInboxUsers() {
+        return this._inboxUsers;
+    }
     public setMessageUser(userEmail: string) {
         this.messagingService.getMessages(userEmail).subscribe((messagesData: any[]) => {
             this.messages = messagesData;

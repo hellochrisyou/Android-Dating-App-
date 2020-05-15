@@ -104,7 +104,6 @@ i.fas {
     cursor: pointer;
     width: 120px;
     height: 35px;
-    background-color: #eeeeed;
     border-radius: 80px;
     padding: 0 18px;
     will-change: transform;
@@ -131,7 +130,7 @@ span.span-title {
     line-height: 70px;
     letter-spacing: 2px;
     color: #eeeeed;
-    background-color: #1f1e1e;
+    background-color: maroon;
     padding: 0 18px;
     -webkit-transition: all 1.2s ease;
     transition: all 1.2s ease;
@@ -185,4 +184,20 @@ span.span-title {
     &:focus {
         outline: none;
     }
+}
+// Icons
+i.fa-star {
+    color: goldenrod;
+}
+i.fa-lightbulb {
+    color: gold;
+}
+i.fa-user-friends {
+    color: navy;
+}
+i.fa-inbox {
+    color: maroon;
+}
+i.fa-users {
+    color: lightseagreen;
 }

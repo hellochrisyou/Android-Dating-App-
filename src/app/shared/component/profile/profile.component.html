@@ -1,36 +1,21 @@
-<div id="other-profile-flex">
-  <div fxLayout="column" fxLayoutAlign="center center">
-    <mat-toolbar>
-      <ion-buttons slot="start">
-        <ion-button ion-button (click)="closeModal()">Close</ion-button>
-      </ion-buttons>
-    </mat-toolbar>
-    <section id="inbox-profile-section">
-      <div fxLayout="column" fxLayoutAlign="center center">
-        <ion-text id=" profile-description" color="dark">
-          <img id="profile-pic" [src]="userStateService.selectedUser?.photoURL">
-          <h2>{{userStateService.selectedUser?.displayName}}</h2>
-          <h5>{{userStateService.selectedUser?.title}}</h5>
-          <p><i><u>Age: </u></i><span class="span-4em">{{userStateService.selectedUser?.age}}</span></p>
-          <p><i><u>Religion: </u></i><span class="span-2em">{{userStateService.selectedUser?.religion}}</span></p>
-          <p><i><u>Have Kids? </u></i><span>{{userStateService.selectedUser?.haveKids}}</span></p>
-          <p><i><u>Hobbies: </u></i><span class="span-2em">{{userStateService.selectedUser?.hobbies}}</span></p>
-          <p><i><u>Description: </u></i><span>{{userStateService.selectedUser?.description}}</span></p>
-        </ion-text>
-      </div>
-    </section>
-    <section>
-      <h1> Photos </h1>
-      <div fxLayout="row" fxLayoutAlign="space-around center">
-        <div *ngFor="let image of imageUrls;index as i">
-          <img class="all-images" [src]="image">
-        </div>
-      </div>
-    </section>
-    <section fxLayout="column" fxLayoutAlign="start center">
-      <a class="oval" (click)="launchPicModal()">
-        <i class="fas fa-camera fa-2x"></i>
-      </a>
-    </section>
-  </div>
+<mat-toolbar>
+  <ion-buttons slot="start">
+    <ion-button ion-button (click)="closeModal()">Close</ion-button>
+  </ion-buttons>
+</mat-toolbar>
+<div class="flex-wrapper-profile" fxLayout="column" fxLayoutAlign="start center">
+  <ion-text class=" profile-description" color="dark" fxLayout="column" fxLayoutAlign="start">
+    <img class="profile-pic" [src]="userStateService.selectedUser?.photoURL">
+    <h2>{{userStateService.selectedUser?.displayName}}</h2>
+    <h5>{{userStateService.selectedUser?.title}}</h5>
+    <p><span class="start-text">Age: </span><span class="span-info">{{userStateService.selectedUser?.age}}</span></p>
+    <p><span class="start-text">Religion: </span><span
+        class="span-info">{{userStateService.selectedUser?.religion}}</span></p>
+    <p><span class="start-text">Have Kids? </span><span
+        class="span-info">{{userStateService.selectedUser?.haveKids}}</span></p>
+    <p><span class="start-text">Hobbies: </span><span
+        class="span-info">{{userStateService.selectedUser?.hobbies}}</span></p>
+    <p><span class="start-text">Description: </span><span
+        class="span-info">{{userStateService.selectedUser?.description}}</span></p>
+  </ion-text>
 </div>

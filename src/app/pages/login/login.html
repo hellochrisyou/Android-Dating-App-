@@ -1,5 +1,5 @@
 <ion-header>
-  <mat-toolbar color="dark">
+  <mat-toolbar>
     <ion-buttons [hidden]="!authService.isAuthenticated" slot="start">
       <ion-menu-button>
         <ion-menu-button><i class="fas fa-bars"></i></ion-menu-button>
@@ -47,18 +47,11 @@
           <ion-row>
             <ion-col fxLayout="row" fxLayoutAlign="space-around center">
               <a class="btn btn-primary button-hover" (click)="onLogin()" type="submit" shape="round" fill="outline">
-                Login</a
-              >
+                Login</a>
             </ion-col>
             <ion-col fxLayout="row" fxLayoutAlign="space-around center">
-              <a
-                class="btn btn-secondary button-hover"
-                (click)="navigateSignUp()"
-                color="medium"
-                shape="round"
-                fill="outline"
-                >Signup</a
-              >
+              <a class="btn btn-secondary button-hover" (click)="navigateSignUp()" color="medium" shape="round"
+                fill="outline">Signup</a>
             </ion-col>
           </ion-row>
         </div>

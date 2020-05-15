@@ -1,13 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a028f50-7ef5-4cbb-8bc4-61a42448ce14" name="Default Changelist" comment="">
+    <list default="true" id="9a5400e9-0ea3-4f83-a357-53be8cc11b50" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/capacitor.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/assets/capacitor.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/example/app/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capacitor.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/capacitor.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/service/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/service/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/service/proposal.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/service/proposal.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/service/stars.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/service/stars.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/service/state/user.state.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/service/state/user.state.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/service/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/service/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/account/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/account/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/account/account.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/account/account.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/account/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/account/account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/inbox/inbox-details/inbox-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/inbox/inbox-details/inbox-details.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/inbox/inbox-details/inbox-details.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/inbox/inbox-details/inbox-details.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/inbox/inbox-details/inbox-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/inbox/inbox-details/inbox-details.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/inbox/inbox.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/inbox/inbox.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/inbox/inbox.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/inbox/inbox.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/inbox/inbox.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/inbox/inbox.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/people/people.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/people/people.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/people/people.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/people/people.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/people/people.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/people/people.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/people/rating/rating.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/people/rating/rating.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/people/rating/rating.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/people/rating/rating.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/proposal/proposal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/proposal/proposal.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/proposal/proposal.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/proposal/proposal.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/signup/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/signup/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/support/support.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/support/support.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/tabs-page/tabs-page-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tabs-page/tabs-page-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/component/card/card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/component/card/card.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/component/card/card.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/component/card/card.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/component/card/card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/component/card/card.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/component/profile/profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/component/profile/profile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/component/profile/profile.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/component/profile/profile.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/interface/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/interface/models.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab1/tab1.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab1/tab1.page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab1/tab1.page.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab1/tab1.page.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab1/tab1.page.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab2/tab2.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab2/tab2.page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab2/tab2.page.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab2/tab2.page.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab2/tab2.page.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab3/tab3.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab3/tab3.page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab3/tab3.page.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab3/tab3.page.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab3/tab3.page.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/tabs.router.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/tabs.router.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/bg/bg-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/bg/bg-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/bg/bg-3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/global.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/theme/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/100.b7514fe24a70e091aa4f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/101.09ea234dfe63c935f45d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/102.412e782e9f81db59cfca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/14.16f941830fdc24b85cfe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/15.1bfd20baa7a86665e786.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/16.3b02dfcd67659a2aa2fe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/17.61dfa985acb877f7e43f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/18.ca4960f1b0c13923fb14.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/19.f43cad56a29204436aca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/2.c2ebaffad9334b857fca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/20.c5ac2c40e8d811c7f83d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/21.b1840896af6d57f2d119.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/22.6683eb49c44156cea964.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/23.86a9eafc176aa4c5f6ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/24.a496f4d8bc42275ccc43.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/25.ec5d2eab219861caac5f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/26.50f79d451ab86a4a9574.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/27.12dcb995696b8c395221.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/28.09178ac24952cf1547f2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/29.b079beeaa62f8c64b500.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/3.81e178b7d2d10b900025.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/30.c8b4e8d9ef07e77896e8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/31.a6339363ac3c553d1ed5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/32.0040c801c7a94f753a7b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/33.71d4904a8f049c4c6d77.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/34.d91daddd8b86883f2c5c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/35.d1abfa19dd46e46adcd6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/36.2e9517f992bdd98b9e93.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/37.6c49f7644e8c90a17ad2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/38.f771f0de74f6d78a881e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/39.79c0a2d1d736c340bb70.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/3rdpartylicenses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/www/3rdpartylicenses.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/4.7ffde88e8ce7cd9b8bae.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/40.0bcaf80dbf772d87ca2b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/41.cd309789219022bd9d9e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/42.4a98df2a573ac08f79ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/43.d2d75fccdb3aa9ae6974.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/44.c10d882ca78d6d071420.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/45.ed7bebe9d8d9654a4c26.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/46.7fc1a9fca2dcadf266a2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/47.f2bd278f67274bfadf65.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/48.2d00d6c3b1755dfa25c1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/49.8108e959780292e8df58.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/5.74295ab49aafcbf4ce89.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/50.39e5004ccc75f62f22c2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/51.52033b5aef876bbee018.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/52.3977f6eebf85039cef0c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/53.564b21d2b9724e1175ab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/54.41c2ccf731bdcce73167.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/55.9409905b6eb2e2aa3bd0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/56.036051d5ee45015fa65d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/57.5b6802fbd07093068101.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/58.2fe9fccb99f51635d9c2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/59.1859d93a0d8b6fd0f576.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/6.ba40bbe028f82abcdfb9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/60.be7255423996094f6990.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/61.8dd3c1950f1829d984f4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/62.81891d060af57dfa7e4e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/63.7583cf75cf843f9453c0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/64.02348c0ebc584256172d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/65.51582ea30177b5673939.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/66.553c1f0bccec0147eb5f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/67.02188684aaf3d8ddc054.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/68.51b5c95c6cef441ae17e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/69.fc512be6175aae3693d1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/7.9dbbd2a8882e4a97d715.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/70.0e0ca33c18332d0c7e8b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/71.92c33f99d3406f007197.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/72.8d15cb72eba05c0c2f22.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/73.8e870e24dc655d1ae145.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/74.995f526beeba17c13d7f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/75.b6a8f29f3a2932aa23f5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/76.14bbe97caea51330c0a8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/77.e380c3d492025bbc576c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/78.d51b9a00bf64f1984d0f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/79.1b136405cfce686d3f64.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/8.a87b79aeb3290d0a5565.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/80.aa04a656a68d3cf53269.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/81.fb1d03b3efbea183a631.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/82.fd88fabb4dcdd570a965.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/83.a91c08ea35635a53684f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/84.89c3bfc8f0440bda645c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/85.f542d68faf4704acd655.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/86.59cb516115bfe0322218.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/87.99f93314b58af26812f7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/88.46581daf0f6585eeaf8c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/89.dcf505b86a36c57740ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/9.78617e256ad70678fbfa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/90.77c0e5c75ef62830c8e2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/91.1dae21d4a4fbfbf3913a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/92.98ba906a1e5e9285ee4a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/93.2112833830b18f026050.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/94.b2eeabb84a8226fa0b89.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/95.affcb736b2c2d530af3e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/96.37d6a52ddc5c2f242791.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/97.6864ffaffbfa756d15ff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/98.14484b197aa01e4add61.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/99.62d0d47bbf671cccb2cb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/assets/icon/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/common.3f74f163ec701f11c043.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/main.63b9e85d3aa17bbf5245.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/polyfills-es5.a0e7523437a2d987f1cc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/polyfills.77dec7d76c31bfff4b8d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/runtime.48a6b229fbfe8a974ca3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/styles.f65038fbe35f6f05d67b.css" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,17 +184,10 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5_API_25" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1bekcTl79NNTwGItxfg9nJnX0QT" />
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
+  <component name="ProjectId" id="1br7UpulIy4fV8Gkv2mUlhjoWBT" />
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -38,120 +200,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Unnamed" type="AndroidRunConfigurationType" factoryName="Android App" nameIsGenerated="true">
-      <module name="dating-props" />
-      <option name="DEPLOY" value="true" />
-      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
-      <option name="DEPLOY_AS_INSTANT" value="false" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
-      <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="dating-props" />
-      <option name="DEPLOY" value="true" />
-      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
-      <option name="DEPLOY_AS_INSTANT" value="false" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
-      <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3a028f50-7ef5-4cbb-8bc4-61a42448ce14" name="Default Changelist" comment="" />
-      <created>1589000025543</created>
+      <changelist id="9a5400e9-0ea3-4f83-a357-53be8cc11b50" name="Default Changelist" comment="" />
+      <created>1589378376629</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1589000025543</updated>
+      <updated>1589378376629</updated>
     </task>
     <servers />
   </component>

@@ -52,7 +52,7 @@ export class SharedCardPage implements OnInit {
   }
 
   public checkRating(value: number): string {
-    return (this.user.averageRating > value ? '#ffc107' : '#cccccc')
+    return (this.user.averageRating >= value ? '#ffc107' : '#cccccc')
   }
 }
 

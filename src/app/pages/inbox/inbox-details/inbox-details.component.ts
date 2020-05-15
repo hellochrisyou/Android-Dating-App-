@@ -1,6 +1,6 @@
 import { AuthService } from './../../../core/service/auth/auth.service';
 import { MessagingStateService } from './../../../core/service/state/messaging.state.service';
-import { AfterContentInit, Component, OnInit } from '@angular/core';
+import { AfterContentInit, Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { AngularFirestoreDocument } from '@angular/fire/firestore';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { ActionSheetController, AlertController, NavController, ToastController } from '@ionic/angular';
@@ -12,13 +12,14 @@ import { GET_DATE, ORDER_MESSAGES } from '../inbox.util';
 import { EmitService } from './../../../core/service/emit.service';
 import { UserStateService } from '../../../core/service/state/user.state.service';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { BaseForm } from 'src/app/shared/base-class/base-form';
 
 @Component({
   selector: 'app-inbox-details',
   templateUrl: './inbox-details.component.html',
   styleUrls: ['./inbox-details.component.scss'],
 })
-export class InboxDetailsComponent implements OnInit {
+export class InboxDetailsComponent extends BaseForm implements OnInit {
 
   data: any[];
   date: string;
@@ -31,15 +32,18 @@ export class InboxDetailsComponent implements OnInit {
   tmpMessages: Message[] = [];
   users: User[];
 
+  messageControl(): AbstractControl {
+    return this.formGroup.get('msgCtrl');
+  }
+
   messageGroup: FormGroup;
 
   messagingTrackFn = (i, message) => message.email;
 
-  public nameControl(): AbstractControl {
-    return this.messageGroup.get('nameCtrl');
-  }
   constructor(
     private activatedRoute: ActivatedRoute,
+    protected formBuilder: FormBuilder,
+    protected changeDetectorRef: ChangeDetectorRef,
     public authService: AuthService,
     private router: Router,
     public fb: FormBuilder,
@@ -52,6 +56,7 @@ export class InboxDetailsComponent implements OnInit {
     public userService: UserService,
     public messagingStateService: MessagingStateService
   ) {
+    super(fb, changeDetectorRef);
     this.activatedRoute.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
         this.otherUserName = this.router.getCurrentNavigation().extras.state.displayName;
@@ -60,48 +65,24 @@ export class InboxDetailsComponent implements OnInit {
     });
   }
 
-
   public ionViewDidEnter(): void {
     this.messagingStateService.setMessageUser(this.authService.authState.email, this.otherEmail);
   }
 
   public ngOnInit(): void {
-    this.buildForm();
-  }
-
-  public buildForm(): void {
-    this.messageGroup = this.fb.group({
-      nameCtrl: ['', Validators.required],
+    super.ngOnInit();
+    this.formGroup = this.fb.group({
+      msgCtrl: ['', [
+        Validators.required,
+        Validators.maxLength(100)
+      ]],
     });
   }
 
-
-  // public navigateMaps(index: number) {
-  //   const navigationExtras: NavigationExtras = {
-  //     state: {
-  //       lat: this.messages[index].messages[0].lat,
-  //       lgn: this.messages[index].messages[0].lgn
-  //     }
-  //   };
-  //   this.navCtrl.navigateForward(['/maps'], navigationExtras);
-  // }
-  // async optionActionSheet(index: number) {
-  //   const actionSheet = await this.actionSheetController.create({
-  //     header: 'Options',
-  //     buttons: [, {
-  //       text: 'Location',
-  //       icon: 'map',
-  //       handler: () => {
-  //         this.navigateMaps(index);
-  //       }
-  //     }]
-  //   });
-  //   await actionSheet.present();
-  // }
-
   public sendMessage(): void {
     this.thisMessage.email = this.authService.authState.email;
-    this.thisMessage.message = this.nameControl().value;
+    this.thisMessage.message = this.messageControl().value;
+    console.log("InboxDetailsComponent -> sendMessage -> this.messageControl().value", this.messageControl().value)
     this.thisMessage.date = GET_DATE();
     this.thisMessage.sender = this.authService.authState.email;
     this.thisMessage.receiver = this.otherEmail;

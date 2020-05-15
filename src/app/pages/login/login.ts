@@ -1,12 +1,12 @@
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { NgForm, FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { AbstractControl, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserOptions } from '../../interfaces/user-options';
-import { NavController, AlertController } from '@ionic/angular';
-import { AuthService } from '../../core/service/auth/auth.service';
-import { ErrorStateMatcher } from 'src/app/shared/utils/error.util';
+import { AlertController, NavController } from '@ionic/angular';
 import { BaseForm } from 'src/app/shared/base-class/base-form';
+
+import { AuthService } from '../../core/service/auth/auth.service';
+import { UserOptions } from '../../interfaces/user-options';
 
 @Component({
   selector: 'page-login',
@@ -48,7 +48,7 @@ export class LoginPage extends BaseForm implements OnInit {
     });
 
     if (this.authService.isAuthenticated !== false) {
-      this.router.navigateByUrl('/account');
+      this.navCtrl.navigateForward('/app/tabs/account');
     } else {
       this.afAuth.auth.signOut();
     }

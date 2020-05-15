@@ -39,7 +39,7 @@ export class ProposalService {
   }
 
   public updateProposal(statusArg: boolean, email: string, id: any) {
-    this.afs.collection('users').doc(email).collection('proposals').doc(id).set({ status: statusArg }, { merge: true });
+    this.afs.collection('users').doc(email).collection('proposals').doc(id).set({ status: statusArg }, { merge: false });
   }
 
   public acceptProposal(proposal: Proposal, email): void {

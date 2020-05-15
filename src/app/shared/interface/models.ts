@@ -39,7 +39,8 @@ export interface Message {
     count?: number;
 }
 export interface Stars {
-    sender?: string;
+    otherEmail?: string;
+    rating?: number
 }
 export interface MessageList {
     messages?: Message;

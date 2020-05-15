@@ -6,7 +6,6 @@ import * as firebase from 'firebase';
 import { ImageService } from '../../../core/service/image.service';
 import { UserService } from '../../../core/service/user.service';
 import { Proposal } from '../../interface/models';
-import { PicModalPage } from './pic-modal/pic-modal.component';
 import { UserStateService } from '../../../core/service/state/user.state.service';
 
 @Component({
@@ -43,7 +42,6 @@ export class ProfileModal implements OnInit {
     public modalCtrl: ModalController,
     public toastController: ToastController,
     public navParams: NavParams,
-    private userService: UserService,
     public userStateService: UserStateService
 
   ) {
@@ -53,42 +51,15 @@ export class ProfileModal implements OnInit {
 
   ngOnInit() {
     console.log('selected user', this.userStateService.selectedUser);
-    this.loadPhotos();
   }
-  async launchPicModal() {
-    const modal = await this.modalController.create({
-      component: PicModalPage,
-      cssClass: 'picModal',
-      componentProps: {
-        'email': this._email
-      }
-    });
-    return await modal.present();
-  }
+
 
   public closeModal() {
     this.modalController.dismiss({
       'dismissed': true
     });
   }
-  public loadPhotos(): void {
-    this.imageService
-      .getUserImageList(this._email)
-      .subscribe(imagesData => {
-        this.images = imagesData;
-        for (const image of this.images) {
-          const storage = firebase.storage();
-          const pathReference = storage.ref(`images/${this._email}/${image.images[0].photoName}`);
 
-          pathReference.getDownloadURL().then(url => {
-            this.imageUrls.push(url);
-          }).catch(function (error) {
-            console.log('AccountPage -> loadPhotos -> error', error);
-            // Handle any errors
-          });
-        }
-      });
-  }
 
   public async presentToast(messageArg: string) {
     const toast = await this.toastController.create({

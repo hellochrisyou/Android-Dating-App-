@@ -1,6 +1,6 @@
 <ion-content fullscreen="true">
   <ion-header>
-    <mat-toolbar color="dark">
+    <mat-toolbar>
       <ion-buttons slot="start">
         <ion-back-button defaultHref="/app/tabs/inbox"></ion-back-button>
       </ion-buttons>
@@ -13,48 +13,58 @@
     </ion-refresher-content>
   </ion-refresher>
 
-
-  <ion-card class="speaker-card">
-    <ion-card-header>
-      <ion-item detail="false" lines="none" class="friend-item">
-        <h5>{{otherUserName}}</h5>
-      </ion-item>
-      <ng-container *ngFor="let message of messagingStateService.messages$ | async; trackBy: messagingTrackFn">
-        <div class="container">
-          <ion-item lines="none">
-            <ng-container *ngIf="message.messages.sender===authService.authState.email">
-              <div class="chat-bubble">
-                <p class="over-flow chat-message">
-                  <i>{{message.messages.date | date}}</i>
-                  <br>
-                  {{message.messages.message}}
-                </p>
-              </div>
-            </ng-container>
-            <ng-container *ngIf="message.messages.sender===otherEmail">
-              <div class="chat-bubble mine">
-                <p class="over-flow chat-message">
-                  <i>{{message.messages.date| date}}</i>
-                  <br>
-                  {{message.messages.message}}
-                </p>
-              </div>
-            </ng-container>
-          </ion-item>
-        </div>
-      </ng-container>
-      <!-- Textarea in an item with a floating label -->
-      <ion-item>
-        <ion-label position="floating">Message</ion-label>
-        <ion-textarea type="text" [formControl]="messageGroup.controls.nameCtrl"></ion-textarea>
-      </ion-item>
-      <br>
-      <ion-item lines="none">
-        <a class="oval" (click)="sendMessage(nameControl().value)">
-          Send
-        </a>
-      </ion-item>
-    </ion-card-header>
-  </ion-card>
-
+  <main>
+    <ion-card class="speaker-card">
+      <ion-card-header>
+        <ion-item detail="false" lines="none" class="friend-item">
+          <h5>{{otherUserName}}</h5>
+        </ion-item>
+        <ng-container *ngFor="let message of messagingStateService.messages$ | async; trackBy: messagingTrackFn">
+          <div class="container">
+            <ion-item lines="none">
+              <ng-container *ngIf="message.messages.sender===authService.authState.email">
+                <div class="chat-bubble">
+                  <p class="over-flow chat-message">
+                    <i>{{message.messages.date | date}}</i>
+                    <br>
+                    {{message.messages.message}}
+                  </p>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="message.messages.sender===otherEmail">
+                <div class="chat-bubble mine">
+                  <p class="over-flow chat-message">
+                    <i>{{message.messages.date| date}}</i>
+                    <br>
+                    {{message.messages.message}}
+                  </p>
+                </div>
+              </ng-container>
+            </ion-item>
+          </div>
+        </ng-container>
+        <!-- Textarea in an item with a floating label -->
+        <ion-item lines="none">
+          <form [formGroup]="formGroup">
+            <mat-form-field appearance="outline">
+              <mat-label>Send Message</mat-label>
+              <textarea formControlName="msgCtrl" #textArea maxlength="100" matInput placeholder=""></textarea>
+              <mat-hint align="end">{{textArea.value?.length || 0}}/100</mat-hint>
+              <mat-error *ngIf="messageControl().hasError('maxlength') && !messageControl().hasError('required')">
+                Too many characters
+              </mat-error>
+              <mat-error *ngIf="messageControl().hasError('required')"> Password is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </form>
+        </ion-item>
+        <br>
+        <ion-item lines="none">
+          <a class="oval" (click)="sendMessage()">
+            Send
+          </a>
+        </ion-item>
+      </ion-card-header>
+    </ion-card>
+  </main>
 </ion-content>

@@ -1,5 +1,5 @@
 {
-  "appId": "com.example.app",
+  "appId": "com.dating.props",
   "appName": "dating-props",
   "bundledWebRuntime": false,
   "npmClient": "npm",

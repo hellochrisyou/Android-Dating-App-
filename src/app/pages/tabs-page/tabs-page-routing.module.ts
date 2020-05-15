@@ -80,7 +80,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/app/tabs/inbox',
+        redirectTo: '/app/tabs/account',
         pathMatch: 'full'
       }
     ]

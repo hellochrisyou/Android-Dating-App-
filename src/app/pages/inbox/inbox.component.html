@@ -1,5 +1,5 @@
 <ion-header>
-  <mat-toolbar color="dark">
+  <mat-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button><i class="fas fa-bars"></i></ion-menu-button>
     </ion-buttons>
@@ -9,13 +9,13 @@
 </ion-header>
 
 <ion-content fullscreen="true">
-  <div class="inbox-flex-container" fxLayout="row wrap" fxLayoutAlign="center start">
+  <div class="inbox-flex-container" fxLayout="column wrap" fxLayoutAlign="start center">
     <h4>Inbox</h4>
-    <div class="flex-container" fxLayout="column wrap" fxLayoutAlign.gt-xs="center start">
+    <div class="flex-container" fxLayout="column wrap" fxLayoutAlign.gt-xs="start center">
 
-      <shared-card-page *ngFor="let user of userStateService.inboxUsers$ | async; trackBy: usersTrackFn" [user]="user"
-        [option]="status">
-        <ng-template #inboxTemplate let-i=index>
+      <shared-card-page *ngFor="let user of userStateService.inboxUsers$ | async; index as i; trackBy: usersTrackFn"
+        [user]="user" [option]="status">
+        <ng-template #inboxTemplate>
           <div class="btn_wrap">
             <span class="span-title">Options</span>
             <i (click)="navigateMessages(user.email, user.displayName)" matTooltip="View Inbox"
@@ -24,6 +24,8 @@
               class="fas fa-user-friends"></i>
             <i (click)="submitProposal(user.email, user.email)" matTooltip="Proposal" matTooltipPosition="above"
               class="fas fa-lightbulb"></i>
+            <i (click)="openBottomSheet(i)" matTooltip="Give a Rating" matTooltipPosition="above"
+              class="fas fa-star"></i>
           </div>
         </ng-template>
         <!-- <ng-template #messagesBtnTemplate let-i=index>

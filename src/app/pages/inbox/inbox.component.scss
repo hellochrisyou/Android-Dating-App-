@@ -1,18 +1,11 @@
 // Icons
-i.fa-star:hover {
-    color: goldenrod;
-}
-i.fa-lightbulb:hover {
-    color: gold;
-}
-i.fa-user-friends:hover {
-    color: crimson;
-}
-i.fa-inbox:hover {
-    color: blue;
-}
 
 .inbox-flex-container {
     background-image: url("../../../assets/img/bg/bg-heart.jpg");
     background-repeat: repeat-y;
+    height: 100%;
+}
+
+h4 {
+    margin-top: 5vh;
 }

@@ -1,5 +1,5 @@
 <ion-header>
-  <mat-toolbar color="dark">
+  <mat-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button><i class="fas fa-bars"></i></ion-menu-button>
     </ion-buttons>
@@ -18,15 +18,15 @@
       <p><span class="start-text">Age:</span><span class="span-info">{{this.user.age}}</span></p>
       <p><span class="start-text">Religion:</span><span class="span-info">{{this.user.religion}}</span></p>
       <p><span class="start-text">Want Kids?</span><span class="span-info">{{this.user.haveKids}}</span></p>
-      <p><span class="start-text">Hobbies:</span></p>
-      <div class="description-info">{{this.user.hobbies}}</div>
+      <p><span class="start-text">Hobbies:</span>
+        <span class="description-info">{{this.user.hobbies}}</span></p>
       <p><span class="start-text">Description:</span></p>
       <div class="description-info">{{this.user.description}}</div>
       <br>
       <br>
       <h4>Edit Profile</h4>
       <ion-list>
-        <ion-item (click)="updateAvatar()">Profile Picture</ion-item>
+        <ion-item (click)="updateAvatar()">Avatar Photo</ion-item>
         <ion-item (click)="updateUsername()">Username</ion-item>
         <ion-item (click)="updateTitle()">Title</ion-item>
         <ion-item>
@@ -60,38 +60,6 @@
         <ion-item (click)="updateDescription()">Description</ion-item>
 
       </ion-list>
-      <div class="buttons">
-        <ion-row>
-          <h3>Add Photo</h3>
-        </ion-row>
-        <ion-row>
-          <ion-col fxLayout="row" fxLayoutAlign="center center">
-            <a class="btn btn-primary button-hover">
-              <label for="file-upload" class="custom-file-upload">
-                File
-              </label>
-              <input id="file-upload" name='upload_cont_img' type="file" style="display:none;"
-                (change)="onFileChanged($event)">
-            </a>
-          </ion-col>
-        </ion-row>
-      </div>
-      <h1> Photos </h1>
-      <br>
-      <section fxLayout="column" fxLayoutAlign="start center">
-        <a class="oval" color="primary" (click)="launchPicModal()">
-          <i class="fa fa-camera fa-2x"></i>
-        </a>
-      </section>
-      <br>
-      <div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.xs="column">
-        <div *ngFor="let image of imageUrls; index as i">
-          <span>
-            <i class="fa fa-times" (click)="deleteImage(i)"></i>
-          </span>
-          <img class="all-images" [src]="image">
-        </div>
-      </div>
     </div>
   </div>
 </ion-content>

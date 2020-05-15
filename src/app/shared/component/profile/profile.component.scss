@@ -1,0 +1,46 @@
+.flex-wrapper-profile {
+    min-height: 100%;
+    padding: 0 2rem 0;
+}
+
+ion-title {
+    color: black;
+}
+
+ion-text {
+    width: 100%;
+}
+ion-toolbar {
+    height: 3rem;
+    top: 0;
+}
+ion-back-button {
+    color: white;
+}
+
+ion-header {
+    box-shadow: none;
+}
+h5 {
+    text-align: center;
+}
+toolbar,
+.navbar {
+    border: 0;
+}
+.start-text {
+    font-style: italic;
+    font-style: underline;
+    text-align: left;
+}
+.span-info {
+    float: right;
+}
+i.fa-camera {
+    color: white;
+    margin: 2vw auto 2vw 6.5vw;
+}
+.profile-pic {
+    width: 120px;
+    margin: 0 auto;
+}

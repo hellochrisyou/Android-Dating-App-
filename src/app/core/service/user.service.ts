@@ -11,6 +11,7 @@ import { MessageCount } from '../../shared/interface/interface';
 })
 export class UserService {
 
+  photoUrl: string;
   ref: AngularFirestoreDocument<any>;
 
   constructor(
@@ -20,12 +21,17 @@ export class UserService {
   ) { }
 
   public createUser(dataArg: User): void {
+    if (dataArg.photoURL === undefined || dataArg.photoURL === null) {
+      this.photoUrl = '../../../assets/img/hidden-user.png'
+    } else {
+      this.photoUrl = dataArg.photoURL;
+    }
     this.afs.collection('users').doc(dataArg.email).set(
       Object.assign({}, {
         uid: dataArg.uid,
         displayName: dataArg.displayName,
         email: dataArg.email,
-        photoURL: dataArg.photoURL,
+        photoURL: this.photoUrl,
         title: 'Newcomer',
         age: null,
         religion: null,
